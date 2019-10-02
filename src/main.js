@@ -1,7 +1,7 @@
 import Vue from 'vue';
+import VueMq from 'vue-mq';
 import App from './App.vue';
 import router from './router';
-import VueMq from "vue-mq";
 
 Vue.config.productionTip = false;
 
@@ -10,8 +10,8 @@ Vue.use(VueMq, {
     mobile: 767,
     tablet: 1023,
     laptop: 1200,
-    desktop: Infinity
-  }
+    desktop: Infinity,
+  },
 });
 
 new Vue({

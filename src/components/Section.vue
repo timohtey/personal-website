@@ -1,8 +1,7 @@
 <template>
-  <div class="section">
+  <div class="section floating">
     <router-link :to="link">
-      <span id="img-placeholder"/>
-      <h4>{{sectionName}}</h4>
+      <h1>{{sectionName}}</h1>
     </router-link>
   </div>
 </template>
@@ -20,18 +19,25 @@ export default {
 };
 </script>
 
-<style scoped>
-h4 {
-  font-size: 50px;
+<style lang="scss" scoped>
+h1 {
+  font-size: 170px;
   margin-top: 0px;
 }
 
-#img-placeholder {
-  height: 250px;
-  width: 250px;
-  background-color: white;
-  border-radius: 50%;
-  display: inline-block;
-  margin-bottom: 15px;
+// Animations
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  from { transform: translate(0,  0px); }
+  65%  { transform: translate(0, 15px); }
+  to   { transform: translate(0, -0px); }
 }
 </style>

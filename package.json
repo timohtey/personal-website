@@ -10,6 +10,7 @@
   "dependencies": {
     "bulma": "^0.7.5",
     "core-js": "^2.6.5",
+    "eslint-utils": "^1.4.2",
     "vue": "^2.6.10",
     "vue-mq": "^1.0.1",
     "vue-router": "^3.0.3"
