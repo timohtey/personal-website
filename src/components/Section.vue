@@ -1,31 +1,30 @@
 <template>
   <div class="section floating">
     <router-link :to="link">
-      <h1>{{sectionName}}</h1>
+      <h1>{{ sectionName }}</h1>
     </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'section',
+  name: "section",
   props: {
     sectionName: {
       type: String,
-      default: 'Section Name',
+      default: "Section Name",
     },
     link: String,
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 h1 {
   font-size: 170px;
   margin-top: 0px;
 }
 
-// Animations
 .floating {
   animation-name: floating;
   animation-duration: 3s;
@@ -36,8 +35,14 @@ h1 {
 }
 
 @keyframes floating {
-  from { transform: translate(0,  0px); }
-  65%  { transform: translate(0, 15px); }
-  to   { transform: translate(0, -0px); }
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
 }
 </style>

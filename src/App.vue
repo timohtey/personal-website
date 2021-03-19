@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
-<style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+<style>
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
 #app {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   text-align: center;
   color: #e84118;
 }

@@ -1,20 +1,15 @@
-import Vue from 'vue';
-import VueMq from 'vue-mq';
-import App from './App.vue';
-import router from './router';
+import { createApp } from "vue";
+import App from "./App.vue";
+import "./tailwind.css";
+import { routes } from "./routes.js";
+import { createRouter, createWebHistory } from "vue-router";
 
-Vue.config.productionTip = false;
+const app = createApp(App);
 
-Vue.use(VueMq, {
-  breakpoints: {
-    mobile: 767,
-    tablet: 1023,
-    laptop: 1200,
-    desktop: Infinity,
-  },
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
 });
 
-new Vue({
-  router,
-  render: h => h(App),
-}).$mount('#app');
+app.use(router);
+app.mount("#app");
